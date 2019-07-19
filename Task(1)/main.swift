@@ -9,23 +9,22 @@
 import Foundation
 
 /*
- Составить программу, которая требует ввести два числа. Если первое число
- больше второго, то программа печатает слово больше. Если первое число меньше
- второго, то программа печатает слово меньше. А если числа равны, программа
- напечатает сообщение Эти числа равны.
+ Составить алгоритм увеличения всех трех, введённых с клавиатуры, переменных
+ на 5,если среди них есть хотя бы две равные. В противном случае выдать
+ ответ «равных нет».
  */
 
-func compareNumbers(num1: Int, num2: Int) {
-  if num1 > num2 {
-    print("Bigger")
+func compareNumbers(num1: Int, num2: Int, num3: Int) {
+  if num1 == num2 || num2 == num3 || num1 == num3 {
+    var x = num1 + 5
+    var y = num2 + 5
+    var z = num3 + 5
+    
+    print(x, y, z)
+  } else {
+    print("not pair of equal number")
   }
-    if num1 < num2 {
-      print("Less then")
-  }
-      if num1 == num2 {
-        print("numbers are equal")
-      }
-    }
+}
 
-let x = compareNumbers(num1: 0, num2: 1)
+let x = compareNumbers(num1: 3, num2: 8, num3: 3)
 print(x)
